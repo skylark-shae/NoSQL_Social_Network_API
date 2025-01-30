@@ -1,8 +1,9 @@
 {
   "name": "nosql_social_network_api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "nodemon --watch server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -10,7 +11,7 @@
     "url": "git+https://github.com/skylark-shae/NoSQL_Social_Network_API.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Skylark",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/skylark-shae/NoSQL_Social_Network_API/issues"
@@ -18,10 +19,9 @@
   "homepage": "https://github.com/skylark-shae/NoSQL_Social_Network_API#readme",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.9.5"
-  },
-  "devDependencies": {
+    "mongoose": "^8.9.4",
     "nodemon": "^3.1.9"
   }
 }

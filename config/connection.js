@@ -1,15 +1,10 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/socialNetworkDB');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialNetworkDB', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+mongoose.set('debug', false);
 
 module.exports = mongoose.connection;
-
-
-// const mongoose = require('mongoose');
-
-// mongoose.connect('mongodb://127.0.0.1:27017/socialNetworkDB', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-// module.exports = mongoose.connection;

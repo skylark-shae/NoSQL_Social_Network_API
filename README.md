@@ -64,13 +64,13 @@ The API is fully deployed and ready for integration with front-end applications 
 ## Demonstration
 <div style="margin-left: 40px;">
   Demonstration of the application's desktop interface:<br/>
-  <img src="GIF_kanban.gif" alt="Desktop demonstration video" width="550"/>
+  <img src="FILL.gif" alt="Demonstration video" width="550"/>
 </div>
 <br/>
 
 <div style="margin-left: 40px;">
   Image of the application's desktop interface:<br/>
-  <img src="Screenshot_kanban.png" alt="Screenshot" width="550"/>
+  <img src="Screenshot.png" alt="Screenshot" width="550"/>
 </div>
 <br/>
 

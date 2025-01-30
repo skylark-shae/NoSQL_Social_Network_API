@@ -39,6 +39,49 @@ const ThoughtSchema = new Schema(
   }
 );
 
+// Debugging middleware:
+// Log when a thought is created
+ThoughtSchema.pre('save', function (next) {
+    console.log(`⏳ Creating thought: "${this.thoughtText}" by ${this.username}`);
+    next();
+  });
+  
+  ThoughtSchema.post('save', function (doc, next) {
+    console.log(`✅ Thought created successfully: "${doc.thoughtText}" by ${doc.username}`);
+    next();
+  });
+  
+  // Log when a thought is updated
+  ThoughtSchema.pre('findOneAndUpdate', function (next) {
+    console.log(`⏳ Updating thought with ID: ${this.getQuery()._id}`);
+    next();
+  });
+  
+  ThoughtSchema.post('findOneAndUpdate', function (doc, next) {
+    if (doc) {
+      console.log(`✅ Thought updated: "${doc.thoughtText}"`);
+    } else {
+      console.log(`⚠️ No thought found to update.`);
+    }
+    next();
+  });
+  
+  // Log when a thought is deleted
+  ThoughtSchema.pre('findOneAndDelete', function (next) {
+    console.log(`⏳ Deleting thought with ID: ${this.getQuery()._id}`);
+    next();
+  });
+  
+  ThoughtSchema.post('findOneAndDelete', function (doc, next) {
+    if (doc) {
+      console.log(`🗑️ Thought deleted: "${doc.thoughtText}"`);
+    } else {
+      console.log(`⚠️ No thought found to delete.`);
+    }
+    next();
+  }); 
+
+
 // Create model using ThoughtSchema:
 const Thought = model('Thought', ThoughtSchema);
 

@@ -26,8 +26,8 @@ router
 // :userId/friends/
 // :friendId
 router
-router.route('/:userId/friends/:friendId')
+router.route('/:userId/friends/:friendId') // assistance from tutor
   .post(addFriend)
   .delete(removeFriend);
-  
+
 module.exports = router;

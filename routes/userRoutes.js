@@ -10,9 +10,11 @@ const {
 } = require('../controllers/userController');
 
 // /api/users
+// :users
 
-// /api/users/:userId
+// :userId
 
-// /api/users/:userId/friends/:friendId
+// :userId/friends/
+// :friendId
 
 module.exports = router;

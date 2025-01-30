@@ -12,7 +12,7 @@ const ReactionSchema = new Schema({
   });
 
 
-// Thought references User for population:
+// Thought refs User for population:
 const ThoughtSchema = new Schema(
   {
     thoughtText: {

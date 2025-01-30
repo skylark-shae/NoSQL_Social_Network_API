@@ -1,5 +1,17 @@
 const { Schema, model } = require('mongoose');
 
-// User schema with references to Thought and User (friends):
+// User schema with refs to Thought / User:
+const UserSchema = new Schema(
+// FILL
+  );
 
-// Virtual to get the number of friends:
+// Modal to get the number of friends:
+UserSchema.virtual('friendCount').get(function () {
+    return this.friends.length;
+  });
+
+// Create model using UserSchema:
+const User = model('User', UserSchema);
+
+// Export Users model:
+module.exports = User;

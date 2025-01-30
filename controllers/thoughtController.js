@@ -1,12 +1,13 @@
 const { Thought, User } = require('../models');
 
-// Get all thoughts, getTHoughts Thoughts.find()
-// Get a single thought by ID, getThoughtById Thought.findOne(FILL)
-// Create a new single thought, createThought User.findOne(FILL)
-// Update a thought by ID, updateThought Thought.findOneAndUpdate(FILL)
-// Delete a thought by ID, deleteThought Thought.findOneAndDelete(FILL)
-// Add a reaction to a thought, addReaction User.findOne(FILL)
-// Remove reaction from a thought, removeReaction Thought.findOneAndUpdate(FILL)
+// Thought Controllers (Get all thoughts, Get a single thought by ID, Create a new single thought, Update a thought by ID, Delete a thought by ID, Add a reaction to a thought, Remove reaction from a thought)
+  // Get all thoughts, getTHoughts Thoughts.find()
+  // Get a single thought by ID, getThoughtById Thought.findOne(FILL)
+  // Create a new single thought, createThought User.findOne(FILL)
+  // Update a thought by ID, updateThought Thought.findOneAndUpdate(FILL)
+  // Delete a thought by ID, deleteThought Thought.findOneAndDelete(FILL)
+  // Add a reaction to a thought, addReaction User.findOne(FILL)
+  // Remove reaction from a thought, removeReaction Thought.findOneAndUpdate(FILL)
 
 module.exports = {
   // Get all thoughts

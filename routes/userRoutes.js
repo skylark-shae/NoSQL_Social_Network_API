@@ -11,10 +11,23 @@ const {
 
 // /api/users
 // :users
+router
+  .route('/')
+  .get(getUsers)
+  .post(createUser);
 
 // :userId
+router
+  .route('/:userId')
+  .get(getUserById)
+  .put(updateUser)
+  .delete(deleteUser);
 
 // :userId/friends/
 // :friendId
+router
+  .route('/:userId/friends/:friendId') // assistance from tutor
+  .post(addFriend)
+  .delete(removeFriend);
 
 module.exports = router;
